@@ -1,0 +1,9 @@
+; /Users/w.sornanankul/Desktop/golang/go-poc-grpc/pb-example.proto
+
+; protoc --go_out=. --go-grpc_out=. /protos/pb-example.proto
+
+; protoc -I=/Users/w.sornanankul/Desktop/golang/go-poc-grpc/protos --go-grpc_out=. --go_out=. /Users/w.sornanankul/Desktop/golang/go-poc-grpc/protos/pb-example.proto
+
+protoc -I=/Users/w.sornanankul/Desktop/golang/go-poc-grpc/protos --go-grpc_out=. --go_out=. /Users/w.sornanankul/Desktop/golang/go-poc-grpc/protos/pb-example.proto
+
+protoc -I=/Users/w.sornanankul/Desktop/golang/go-poc-grpc/proto --go_out=. --go-grpc_out=. /Users/w.sornanankul/Desktop/golang/go-poc-grpc/proto/pb-example.proto

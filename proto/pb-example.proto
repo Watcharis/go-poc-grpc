@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option go_package = "go-poc-grpc/pb-example/proto";
+
+package example;
+
+service UserService {
+    // Method ที่ใช้ส่ง PersonRequest และรับคืนเป็น PersonResponse
+    rpc GetUser (PersonRequest) returns (PersonResponse);
+    rpc InsertUser (InsertPersonRequest) returns (InsertPersonResponse);
+}
+
+message PersonRequest {
+    int32 id = 1;  // ใช้ส่งค่า ID ของผู้ใช้
+}
+
+message PersonResponse {
+    string name = 1; // ชื่อของผู้ใช้
+    int32 id = 2;    // ID ของผู้ใช้
+    string email = 3; // อีเมลของผู้ใช้
+}
+
+message InsertPersonRequest {
+    string name = 1;
+    string email = 2;
+    string phone_no = 3;
+}
+
+message InsertPersonResponse {
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+    string phone_no = 4;
+}
